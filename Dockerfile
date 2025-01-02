@@ -4,7 +4,7 @@ RUN dnf install -y nginx
 
 RUN dnf install python3-pip -y
 
-RUN pip3 install requests
+RUN pip3 install black
 
 COPY entrypoint.sh /
 
