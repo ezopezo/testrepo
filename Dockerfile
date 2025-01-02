@@ -2,7 +2,7 @@ FROM registry.access.redhat.com/ubi8/ubi:latest
 
 RUN dnf install -y nginx
 
-RUN pip3 install tensorflow
+RUN pip install tensorflow
 
 COPY entrypoint.sh /
 
