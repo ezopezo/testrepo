@@ -28,6 +28,8 @@ spec:
     value: 5d
   - name: dockerfile
     value: Dockerfile
+  - name: hermetic
+    value: "true"
   pipelineSpec:
     description: |
       This pipeline is ideal for building container images from a Containerfile while reducing network traffic.
@@ -103,7 +105,7 @@ spec:
       description: Execute the build with network isolation
       name: hermetic
       type: string
-    - default: "generic"
+    - default: ""
       description: Build dependencies to be prefetched by Cachi2
       name: prefetch-input
       type: string
