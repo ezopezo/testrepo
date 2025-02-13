@@ -36,6 +36,8 @@ COPY --from=quay.io/centos/centos:stream9 /usr/bin/yum /usr/bin/yum
 # Copy the Go binary from base2
 COPY --from=base2 /app/hello /usr/local/bin/hello
 
+RUN echo "Hello from UBI9!" > /opt/ubi9_file.txt
+
 # Expose port 80 for Nginx
 EXPOSE 80
 
